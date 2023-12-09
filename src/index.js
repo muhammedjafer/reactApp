@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+// import ProfileCard from './ProfileCard';
 
 // 2) get a reference to the div with ID root
 const el = document.getElementById('root');
