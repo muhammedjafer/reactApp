@@ -1,32 +1,12 @@
-import 'bulma/css/bulma.css';
-import { useState } from 'react';
+import searchImages from "./Api";
+import SearchBar from "./components/SearchBar";
 
-function getRandomAnimal() {
-    const animals = [
-        'bird',
-        'cat',
-        'cow',
-        'dog',
-        'gator',
-        'horse'
-    ];
-
-    return animals[Math.floor(Math.random() * animals.length)];
+function App() {
+  return (
+    <div>
+      <SearchBar onSubmit={(term) => searchImages(term)} />
+    </div>
+  );
 }
 
-export default function App() {
-
-    const [animals, setAnimals] = useState([]);
-
-    const handleClick = () => {
-        
-        setAnimals([...animals, getRandomAnimal()]);
-    };
-
-    return (
-        <div className='m-3'>
-            <button onClick={handleClick} className='button'>Add Animal: </button>
-        <div>{animals}</div>
-        </div>
-    );
-}
+export default App;
