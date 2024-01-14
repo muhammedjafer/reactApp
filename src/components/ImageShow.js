@@ -1,5 +1,3 @@
-function ImageShow() {
-    return (<div>ImageShow</div>);
+export default function ImageShow() {
+  return <div>ImageShow</div>;
 }
-
-export default ImageShow;

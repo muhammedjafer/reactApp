@@ -1,4 +1,4 @@
-function searchBar({ onSubmit }) {
+export default function searchBar({ onSubmit }) {
   return (
     <div>
       <input type="text" />
@@ -6,5 +6,3 @@ function searchBar({ onSubmit }) {
     </div>
   );
 }
-
-export default searchBar;
