@@ -1,8 +1,16 @@
 export default function searchBar({ onSubmit }) {
+  const handleFormSubmit = (event) => {
+    // always use it to know if the user
+    // clicked the submit button
+    event.preventDefault();
+    onSubmit('cars');
+  };
+
   return (
     <div>
-      <input type="text" />
-      <button onClick={() => onSubmit("cars")}>Click me</button>
+      <form onSubmit={handleFormSubmit}>
+        <input />
+      </form>
     </div>
   );
 }

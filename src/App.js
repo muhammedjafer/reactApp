@@ -2,9 +2,10 @@ import searchImages from "./Api";
 import SearchBar from "./components/SearchBar";
 
 export default function App() {
-  return (
-    <div>
-      <SearchBar onSubmit={(term) => searchImages(term)} />
-    </div>
-  );
+  //callback
+  const handleSubmit = (term) => {
+    searchImages("cars");
+  };
+
+  return <SearchBar onSubmit={handleSubmit} />;
 }
